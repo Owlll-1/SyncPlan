@@ -10,12 +10,12 @@ const calendar = document.querySelector(".calendar"),
     eventDate = document.querySelector(".event-date"),
     eventsContainer = document.querySelector(".events"),
     addEventBtn = document.querySelector(".add-event"),
-    addEventWrapper = document.querySelector(".add-event-wrapper "),
-    addEventCloseBtn = document.querySelector(".close "),
-    addEventTitle = document.querySelector(".event-name "),
-    addEventFrom = document.querySelector(".event-time-start "),
-    addEventTo = document.querySelector(".event-time-end "),
-    addEventSubmit = document.querySelector(".add-event-btn ");
+    addEventWrapper = document.querySelector(".add-event-wrapper"),
+    addEventCloseBtn = document.querySelector(".close"),
+    addEventTitle = document.querySelector(".event-name"),
+    addEventFrom = document.querySelector(".event-time-start"),
+    addEventTo = document.querySelector(".event-time-end"),
+    addEventSubmit = document.querySelector(".add-event-btn");
 
 let today = new Date();
 let activeDay;
@@ -390,8 +390,15 @@ function saveEvents() {
 }
 //function to get events from local storage
 function getEvents() {
-    if (localStorage.getItem("events" === null)) { 
-        return;
+  try {
+    // parse empty array if nothing saved
+    const arr = JSON.parse(localStorage.getItem('events') || '[]');
+    if (Array.isArray(arr)) {
+      eventsArr.push(...arr);
+    } else {
+      localStorage.removeItem('events'); // normalize bad shape
     }
-    eventsArr.push(...JSON.parse(localStorage.getItem("events")));
-} 
+  } catch (e) {
+    localStorage.removeItem('events'); // normalize corrupted JSON
+  }
+}

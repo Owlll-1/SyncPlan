@@ -1,4 +1,4 @@
-﻿root {
+﻿:root {
     --primary-clr: darkslategrey;
 }
 * {
@@ -267,12 +267,12 @@ body {
     padding-left: 50px;
     color: #fff;
     cursor: pointer;
-    background: linear-gradient(90 deg, #396060, transparent);
+    background: linear-gradient(90deg, #396060, transparent);
 }
 .events .event:nth-child(even){
     background: transparent;
 }
-.events.event:hover {
+.events .event:hover {
     background: linear-gradient(90deg, #396060, transparent);
 }
 .events .event .title{
@@ -456,7 +456,7 @@ body {
     .container .right {
         width: 100%;
         height: 100%;
-        padding: 20 0;
+        padding: 20px 0;
     }
     .calendar::before,
     .calendar::after {
@@ -474,7 +474,7 @@ body {
     .events {
         padding-bottom: 340px;
     }
-    .add.add-event-wrapper {
+    .add-event-wrapper {
         bottom: 100px;
     }
 }
