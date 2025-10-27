@@ -1,15 +1,15 @@
-#SyncPlan — Contact Form 
+# SyncPlan — Contact Form 
 
-##Overview
+## Overview
 
 The contact form lets users send messages or feedback. It includes fields for name, email, subject, and message.
 
-##Files
+## Files
 - contact.html – form structure
 - contact.js – handles form submission
 - contact.css – styles the form
 
-##How it works
+## How it works
 
 - User fills in their name, email, subject, and message.
 - The form checks that all fields are filled in.
