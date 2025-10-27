@@ -33,7 +33,7 @@ SyncPlan is a beginner-friendly calendar web application that lets users **add, 
 
 ## 🚀 Getting Started
 
-### Option A — Open locally (no server required)
+### Open locally (no server required)
 1. Clone or download this repository.
 2. Open `HTMLPage1.html` in your browser.
 3. Add/edit/delete events to try the UI.
